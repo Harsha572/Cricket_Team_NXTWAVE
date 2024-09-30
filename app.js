@@ -74,7 +74,7 @@ app.put('/players/:playerId/', async (request, response) => {
   SET player_name = ?, jersey_number = ?, role = ?
   WHERE player_id = ?
   `
-  await db.run(updatePlayerQuery, [player_name, jersey_number, role, player_id])
+  await db.run(updatePlayerQuery, [player_name, jersey_number, role, playerId])
   response.status(200).send('Player Details Updated')
 })
 
