@@ -56,11 +56,11 @@ app.post('/players/', async (request, response) => {
 
 //get a player by playerId
 app.get('/players/:playerId/', async (request, response) => {
-  const {player_id} = request.params
+  const {playerId} = request.params
   const getPlayerQuery = `
   SELECT * FROM cricket_team WHERE player_id = ?
   `
-  const player = await db.get(getPlayerQuery, [player_id])
+  const player = await db.get(getPlayerQuery, [playerId])
   response.status(200).send(playerList(player))
 })
 
