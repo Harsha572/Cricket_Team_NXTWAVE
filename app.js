@@ -26,9 +26,9 @@ initializeDBAndServer()
 
 const playerList = each => {
   return {
-    player_id: each.player_id,
-    player_name: each.player_name,
-    jersey_number: each.jersey_number,
+    playerId: each.player_id,
+    playerName: each.player_name,
+    jerseyNumber: each.jersey_number,
     role: each.role,
   }
 }
